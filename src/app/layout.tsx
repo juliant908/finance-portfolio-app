@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
+import SearchBar from "./components/searchBar/searchBar";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body
         className={`${montserrat.variable} antialiased dark grid place-items-center`}
       >
+        <SearchBar />
         {children}
       </body>
     </html>

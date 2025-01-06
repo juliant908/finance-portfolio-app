@@ -1,4 +1,4 @@
-import { getDailyOpenClose } from "./services/dailyOpenClose";
+import { getDailyOpenClose } from "../services/dailyOpenClose";
 
 export default async function Home() {
   const data = await getDailyOpenClose("AAPL", "2023-01-03");

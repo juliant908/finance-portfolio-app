@@ -1,9 +1,10 @@
-import { getTickerDetails } from "../../services/tickerDetails";
-import { TickerDetails } from "../../interfaces/tickerDetails.interface";
+import { getTickerDetails } from "../../../services/tickerDetails";
+import { TickerDetails } from "../../../interfaces/tickerDetails.interface";
 import StockHeader from "@/components/stockHeader";
 import { Suspense } from "react";
 import StockHeaderLoading from "@/components/stockHeaderLoading";
-import StockChart from "@/components/stockChart";
+import StockChart from "@/components/charts/stockChart";
+import CompanyFinances from "@/components/companyFinances";
 
 
 export default async function StockPage({ params }: Readonly<{
@@ -20,11 +21,12 @@ export default async function StockPage({ params }: Readonly<{
  return (
   <div className="container my-6">
    <Suspense fallback={<StockHeaderLoading />}>
-    <StockHeader props={details?.results} />
+    <StockHeader props={details.results} />
    </Suspense>
    <Suspense fallback={<div>Loading chart...</div>}>
     <StockChart stockTicker={ticker} name={details?.results.name} />
    </Suspense>
+   <CompanyFinances name={details?.results?.name} stockTicker={ticker} />
   </div>
  );
 }
