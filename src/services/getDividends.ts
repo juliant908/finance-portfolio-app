@@ -1,5 +1,3 @@
-// example https://api.polygon.io/v3/reference/dividends?limit=10&apiKey=L9HDup0NnpNa_yfp0c_qN7IdHmfDBe1W
-
 import {DividendInfo} from "../interfaces/dividends.interface";
 import {ENDPOINTS} from "../constants/endpoints";
 

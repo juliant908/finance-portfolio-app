@@ -1,5 +1,3 @@
-// example https://api.polygon.io/v2/aggs/ticker/AAPL/range/5/minute/2023-01-09/2023-01-09?adjusted=true&sort=asc
-
 import {ENDPOINTS} from "../constants/endpoints";
 import {AggregateInfo} from "../interfaces/aggregates.interface";
 

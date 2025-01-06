@@ -1,5 +1,3 @@
-// example https://api.polygon.io/v3/reference/tickers?market=stocks&search=A&active=true&limit=5&apiKey=L9HDup0NnpNa_yfp0c_qN7IdHmfDBe1W
-
 import {Tickers} from "../interfaces/tickers.interface";
 import {ENDPOINTS} from "../constants/endpoints";
 
